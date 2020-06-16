@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  background-color: orange;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  color: white;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  padding: 10px;
+}
+nav .logo {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  font-size: 1.8em;
+}
+nav .logo img {
+  padding: 10px;
+  width: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+nav ul li a:hover {
+  color: red;
+}
+nav ul li a.active {
+  font-size: 1.2em;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+}
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 20px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-2px, 1px);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(1px, -5px);
+}
+section {
+  margin-top: 50px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+#Home {
+  background-image: url(Nomor_1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  color: #ffffff;
+}
+#Home img {
+  width: 250px;
+  border-radius: 50%;
+  margin-top: 60px;
+}
+#Home h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 70pt;
+}
+#About {
+  background-image: url(Nomor_2.jpg);
+  background-size: cover;
+  padding-top: 40px;
+  color: #ffffff;
+}
+#About h2 {
+  font-family: "Satisfy", cursive;
+  font-size: 40pt;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+#About .content {
+  display: flex;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#About .content p {
+  width: 40%;
+  text-align: justify;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+#Portofolio {
+  background-image: url(Nomor_3.jpg);
+  background-size: cover;
+  color: #ffffff;
+}
+#Portofolio h2 {
+  font-family: "Satisfy", cursive;
+  font-size: 40pt;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  padding-top: 20px;
+}
+#Portofolio .content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#Portofolio .content iframe {
+  background-color: #ffffff;
+  width: 30%;
+  height: 80vh;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 40%;
+  }
+}
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    background-color: orange;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #Portofolio .content iframe {
+    width: 100%;
+  }
+}
+/* animasi glowing text */
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* Responsive Breakpoint */

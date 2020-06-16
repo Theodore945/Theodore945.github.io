@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Penjumlahan</title>
+    <style>
+        th {
+            background-color: red;
+            color: white;
+            border: 1px solid black;
+            width: 20px;
+            padding: 3px;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 3px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .even {
+            background-color: rosybrown;
+        }
+
+        .odd {
+            background-color: seagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="penjumlahan-tabel"></table>
+    <script>
+        // self executuing function here
+        (function () {
+            var sampai = 100;
+
+            // looping
+            for (let i = 0; i <= sampai; i++) {
+                var row = "";
+                if (i == 0) {
+                    row += "<thead>";
+                }
+                row += "<tr>";
+                for (let j = 0; j <= sampai; j++) {
+                    if (i == 0) {
+                        if (j != 0) {
+                            row += "<th>" + j + "</th>";
+                        } else {
+                            row += "<th>+</th>";
+                        }
+                    } else {
+                        if (j != 0) {
+                            var val = i + j;
+                            var class_name = "odd";
+                            if (val % 2 == 0)
+                                class_name = "even";
+                            row += "<td class='" + class_name + "'>" + val + "</td>";
+                        } else {
+                            row += "<th>" + i + "</th>";
+                        }
+                    }
+
+                }
+                row += "</tr>";
+                if (i == 0) {
+                    row += "</thead>";
+                }
+
+                document.getElementById("penjumlahan-tabel").innerHTML += row;
+
+            }
+
+        })();
+    </script>
+
+</body>
+
+</html>

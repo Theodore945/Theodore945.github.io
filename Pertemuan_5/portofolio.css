@@ -1,0 +1,57 @@
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: lightseagreen;
+    width: 100%;
+    min-height: 50px;
+    padding: 15px;
+    color: white;
+    display: flex;
+}
+#header img {
+    width: 50px;
+    margin-top: 15px;
+    padding-right: 10px;
+    height: 50px;
+
+}
+#header h1
+{
+    vertical-align: middle;
+    width: 40%;
+
+}
+#header ul{
+    list-style-type: none;
+}
+#header ul li{
+    float: left;
+    padding: 10px;
+    font-size: 16pt;
+    margin-top: 15px;
+}
+#sidebar {
+    width: 15%;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    bottom: 0;
+    background-color: green;
+}
+#sidebar ul{
+    list-style-type: none;
+    color: ivory;
+}
+#sidebar ul li {
+    padding: 10px;
+}
+#container {
+    position: absolute;
+    width: 85%;
+    top: 110px;
+    bottom: 0;
+    left: 15%;
+    background-image: url(background.jpg);
+    background-size: cover;
+}

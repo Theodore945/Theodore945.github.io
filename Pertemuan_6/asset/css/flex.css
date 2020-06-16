@@ -1,0 +1,52 @@
+body,html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(187, 184, 184);
+}
+.container-1{
+    width: 800px;
+    background-color: white;
+    margin: 50px auto;
+    display: flex;
+}
+.kolom-utama{
+    flex: 3;
+    order: 2;
+}
+.sidebar-satu{
+    flex: 1;
+    order: 1;
+}
+.sidebar-dua{
+    flex: 2;
+    order: 3;
+}
+
+.container-2{
+    max-width: 800px;
+    margin: 50px auto;
+}
+.layanan{
+    padding: 5px;
+    box-sizing: border-box;
+}
+.layanan.satu{
+    background-color: green;
+}
+.layanan.dua{
+    background-color: blue
+}
+.layanan.tiga{
+    background-color: orange;
+}
+@media(min-width: 600px){
+    .container-2{
+        display: flex;
+    justify-content: space-between;
+    }.layanan{
+        width: 30%;
+    }
+
+}
