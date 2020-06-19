@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#content {
+  width: 40vw;
+  height: 90vh;
+  margin-bottom: 50px;
+  margin: 15px auto;
+  background-color: #ebebeb;
+  box-sizing: border-box;
+}
+.display {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.display input {
+  width: 100%;
+  line-height: 2em;
+}
+#Tombol-Kalkulator {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tombol {
+  width: 25%;
+}
+.tombol input {
+  width: 100%;
+  font-size: 2em;
+}
