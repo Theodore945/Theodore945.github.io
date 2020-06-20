@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#content {
+  width: 40vw;
+  height: 50vh;
+  margin-bottom: 50px;
+  margin: 15px auto;
+  background-color: red;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tombol {
+  width: 33%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.tombol input {
+  width: 100%;
+  font-size: 2em;
+  padding: 10px;
+  height: 100%;
+}
+#score {
+  display: flex;
+  flex-direction: column;
+}
+#score .sc {
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .content {
+    width: 100vw;
+  }
+}
