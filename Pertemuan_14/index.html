@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <style>
+      #counter {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+      #counter {
+        display: flex;
+        justify-content: center;
+        font-size: 4em;
+      }
+      #start {
+        font-size: 3em;
+      }
+    </style>
+    <div id="counter">000</div>
+    <input type="button" value="Start" id="start" />
+  </body>
+  <script src="jquery.min.js"></script>
+  <script>
+    var timer;
+    $(function () {
+      $("#start").click(counterfunction);
+    });
+
+    function counterfunction() {
+      if ($("#start").val() === "Start") {
+        $("#counter").html("000");
+        startfunction();
+        $("#start").val("Stop");
+      } else {
+        $("#start").val("Start");
+        clearTimeout(timer);
+      }
+    }
+
+    function startfunction() {
+      var count = parseInt($("#counter").html());
+      count++;
+      count = "000" + count;
+      count = count.substr(count.length - 3);
+      $("#counter").html(count);
+      timer = setTimeout(startfunction, 1000);
+    }
+  </script>
+</html>
